@@ -1,0 +1,31 @@
+{
+	"name": "Project Armada",
+	"version": "0.3",
+	"description": "A button to send top web mp4 to telegram",
+	"manifest_version": 2,
+	"permissions": [
+		"https://topwebm.antiadmin.ru/sendtop",
+		"tabs",
+		"storage"
+	],
+	"browser_action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+			"16": "icon-16.png",
+			"32": "icon-32.png",
+			"48": "icon-48.png",
+			"128": "icon-128.png"
+		}
+	},
+
+	"content_scripts": [
+		{
+			"js": [
+				"script.js"
+			],
+			"matches": [
+				"*://2ch.hk/*"
+			]
+		}
+	]
+}
